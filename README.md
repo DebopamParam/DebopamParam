@@ -201,33 +201,14 @@ Building a small LLama-style foundational model from scratch using PyTorch, Flas
 - Finalist in IIT Bombay's Mood Indigo Bengaluru Event
 - Open-source contribution to Byaldi - 575 ✰: [Fix langchain integration not present in pypi tar & whl-- pyproject.toml](https://github.com/AnswerDotAI/byaldi/pull/50)
 
-## 📜 Certifications
-
-- [COURSERA: Advanced Learning Algorithms](https://coursera.org/share/d540318c8cb4a7e802d8c4964a471d34)
-- [COURSERA: Supervised Machine Learning: Regression and Classification](https://coursera.org/share/d540318c8cb4a7e802d8c4964a471d34)
-
-## 🙋‍♂️ Volunteering
-
-- **Git/GitHub Instructor** - Taught juniors fundamentals of Git and GitHub
-- **Event Coordinator** - Acharya Technical Club - Steigen
-
 ## 📺 YouTube
 
 - [Understand the Importance of Math in ML with Numpy Broadcasting](https://youtu.be/QnnZyEeUdhE?si=6GuAa8hj5e7YvfaG)
 - [Let's Visualize Optimal Floyd's Cycle Detection Algorithm with a String](https://youtu.be/C55wl2wcb9A?si=pV8Wlhbtf5W_j3un)
 - [Python Compilerrrr???](https://youtu.be/vvkp3ak7uCI?si=xsRcTANstVBM6HcY)
 
-## 🎵 Hobbies
-
-- Singing
-- Playing Guitar
-- Watching Sports
-
 ## 📫 Contact Me
 
 - Email: debopamwork@gmail.com
 - LinkedIn: [Connect with me](https://www.linkedin.com/in/debopam-chowdhury-param-600619229/)
 
----
-
-⭐️ From [Debopam Chowdhury](https://github.com/DebopamParam)
