@@ -1241,17 +1241,34 @@
 
         .video-item {
             flex: 0 0 auto;
-            min-width: 400px;
+            width: 300px;
+            /* Fixed width */
+            height: 350px;
+            /* Fixed height */
             background: var(--light);
             border-radius: 15px;
             box-shadow: var(--shadow);
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .video-title {
             padding: 1rem;
             font-weight: 600;
             color: var(--text);
+            white-space: normal;
+            /* Allow text wrapping */
+            overflow-wrap: break-word;
+            /* Break long words */
+            line-height: 1.4;
+            font-size: 0.95rem;
+            min-height: 80px;
+            /* Ensure consistent title area height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
         .video-wrapper {
@@ -1259,6 +1276,7 @@
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
+            flex-shrink: 0;
         }
 
         .video-wrapper iframe {
