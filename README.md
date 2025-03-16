@@ -37,7 +37,7 @@ Machine Learning & Software Engineer with expertise in ML/DL, MLOps, Mathematics
 > [Small open-source contribution - Byaldi - 575 ✰](https://github.com/AnswerDotAI/byaldi/pull/50)
 
 ### 2. AI GYM BUDDY (Langchain | Flutter | Riverpod | Gemini)
-> Solo Creator: Design - Code - Deploy - Marketing
+> Solo Creator: Design - Code - Deploy - Marketing ---- Deployed✅
 
 Personalized AI-driven workout app with smart equipment detection and progress tracking.
 
@@ -52,7 +52,7 @@ Personalized AI-driven workout app with smart equipment detection and progress t
 📱 [Google Play Store](https://play.google.com/store/apps/details?id=com.aigymbuddy.me&hl=en) | 🌍 [Website](http://www.aigymbuddy.in/) | 🎥 [1-Min Demo Video](https://youtube.com/shorts/0ZR0IWiZJQE?si=IsL4hi5JQe9FYAgk)
 
 ### 3. FLUTTER DEVELOPER (Contract)
-> **Focus-flow, Remote** | Nov-Dec 2024
+> **Focus-flow, Remote** | Nov-Dec 2024 
 
 ### 4. FLUTTER DEVELOPER INTERN
 > **UNFILTR, INC, Bengaluru, India** | Jan-June 2023
@@ -62,7 +62,7 @@ Personalized AI-driven workout app with smart equipment detection and progress t
 ## Deep Learning
 
 ### 1. NSFW Classifier - Image Content Moderation System
-*High-accuracy NSFW content detection system for social media platforms*
+*High-accuracy NSFW content detection system for social media platforms* ___Deployed✅
 
 - 96% accuracy & 0.92 F1 score
 - Incrementally trained on 130,000 sample images
@@ -75,7 +75,7 @@ Personalized AI-driven workout app with smart equipment detection and progress t
 ---
 
 #### 2. IBM EMPLOYEE ATTRITION PREDICTOR
-*End-to-end ML application predicting employee attrition with 85% AUC*
+*End-to-end ML application predicting employee attrition with 85% AUC* ____Deployed✅
 
 - Hyperparameter optimized models (MLP, XGBoost, Logistic Regression)
 - FastAPI backend with Pydantic schema validation
@@ -87,10 +87,10 @@ Personalized AI-driven workout app with smart equipment detection and progress t
 [🎥Explanation Video](https://www.linkedin.com/posts/debopam-chowdhury-param-600619229_machinelearning-deeplearning-aws-activity-7244476917884608512-DfbD?utm_source=share&utm_medium=member_desktop) | [🌍Live Webapp + Architecture + Training Code + Training Data](https://www.debopamchowdhury.works/)
 
 #### 3. Scalable Deep Learning Based Recommendation System
-*Scalable recommendation system handling 25M+ candidates*
+*Scalable recommendation system capable of handling 25M+ candidates* ____Deployed✅
 
 - Hybrid architecture with candidate generation and re-ranking
-- Custom 4-tower deep learning model trained from scratch
+- Custom 4-tower deep learning model trained from scratch using Tensorflow, using Nvidia's 2xT4 GPUs
 - Resistant to cold-start problem
 
 **Technologies:** TensorFlow, Faiss, Vector DB, Distributed GPU Training, Langchain, BGE, Streamlit
@@ -100,12 +100,12 @@ Personalized AI-driven workout app with smart equipment detection and progress t
 ---
 
 ### 4. Non-Sequential Breast Cancer Classification System
-*Multi-output deep learning model for breast cancer detection*
+*Multi-output deep learning model for breast cancer detection* ____Deployed✅
 
 - Published in IRJET
 - Processes both mammogram images and tabular clinical data
 - Fine-tuned EfficientNetV2B3 for feature extraction
-- Distributed training with TensorFlow's MirroredStrategy
+- Distributed training with TensorFlow's MirroredStrategy in Nvidia 2xT4-GPUs
 
 **Technologies:** TensorFlow, Transfer Learning, EfficientNetV2, FusedMB-CNN
 
@@ -116,9 +116,9 @@ Personalized AI-driven workout app with smart equipment detection and progress t
 ## NLP & LLM
 
 ### 5. LLM-Finetuning (Local SQL Agent by Finetuning SLM)
-*SQL agent created by finetuning Qwen2.5-3B-Coder-Instruct model*
+*SQL agent created by finetuning Qwen2.5-3B-Coder-Instruct model* ____Deployed✅
 
-- Supervised finetuning with QLora
+- Supervised finetuning with QLora, with High Quality SQL synthetic data, generated from ChatGpt-4o.
 - Quantized from BF16 to int4(q4_k_m) for lightweight inference
 - Integrated with Ollama and LlamaCpp
 
@@ -149,7 +149,7 @@ Building a small LLama-style foundational model from scratch using PyTorch, Flas
 ## Synthetic Data Generation
 
 ### 8. TurboML knowledge distillation Synthetic Data Generation
-*1.3K Synthetic SFT dataset made without using any 3rd party Library*
+*1.3K Synthetic SFT dataset made without using any 3rd party Library* ____Deployed✅
 
 - Q&A dataset about TurboML with 1,343 technical questions and detailed answers
 - Covers implementation, troubleshooting, architecture design, and performance optimization
@@ -161,7 +161,7 @@ Building a small LLama-style foundational model from scratch using PyTorch, Flas
 ## Generative AI
 
 ### 9. TurboML Chatbot with Grounding
-*Made TurboML Chat Agent by scraping all the Docs + Pypi package with Grounding Links*
+*Made TurboML Chat Agent by scraping all the Docs + Pypi package with Grounding Links* ____Deployed✅
 
 [🌍 Check it out live](https://turboml-chat.streamlit.app/)
 
