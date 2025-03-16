@@ -3,7 +3,7 @@ window.portfolioConfig = {
     profileImage: "images/profile.png",
     videos: [
       {
-        title: "Let’s Visualize Vectorization like never before",
+        title: "Let’s Visualize Vectorization like never before - Understand the Importance of Math in ML with Numpy Broadcasting",
         youtubeId: "QnnZyEeUdhE"
       },
       {
