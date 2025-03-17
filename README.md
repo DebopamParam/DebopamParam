@@ -5,8 +5,8 @@
 Machine Learning & Software Engineer with expertise in ML/DL, MLOps, Mathematics, RAG, and Flutter. I'm passionate about building deployable AI-based solutions and have a strong foundation in Machine Learning, Computer Science, and Mathematics.
 
 - 🌱 Currently working on LLM Pre-Training from scratch using PyTorch & Math
-- 💼 Recently completed a contract as a Generative AI Engineer
-- 🔭 Solved 100+ problems on LeetCode
+- 💼 Have ***10+ Deployed projects*** from various domains like: `NLP/LLM` - `Computer Vision` - `Deep Learning` - `Synthetic Data Generation` - `GenAI`, where all training code and models are open-sourced.
+- 🏋🏻‍♂️Creator of AiGymBuddy - [PlayStore](https://play.google.com/store/apps/details?id=com.aigymbuddy.me&hl=en) / [Web Prototype](http://www.aigymbuddy.in/) / [Video Demo](https://youtube.com/shorts/0ZR0IWiZJQE?si=IsL4hi5JQe9FYAgk)
 - 🎓 BE in Information Science from Acharya Institute of Technology (2021-2025)
 - 📫 Reach me at: debopamwork@gmail.com
 - 🌐 Website - https://debopamparam.github.io/DebopamParam/
