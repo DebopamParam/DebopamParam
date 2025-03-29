@@ -1720,6 +1720,15 @@
             cursor: zoom-in;
             /* Indicate it can be enlarged */
         }
+
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            /* Explicitly ensure they take full width */
+            position: relative;
+            /* Can sometimes help contain absolutely positioned children */
+        }
     </style>
 </head>
 
