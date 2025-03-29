@@ -457,14 +457,6 @@
             gap: 2rem;
         }
 
-        .project-card {
-            background: var(--light);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
         .project-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -474,6 +466,7 @@
             width: 100%;
             height: 200px;
             overflow: hidden;
+            flex-shrink: 0;
         }
 
         .project-img img {
@@ -485,10 +478,6 @@
 
         .project-card:hover .project-img img {
             transform: scale(1.1);
-        }
-
-        .project-content {
-            padding: 1.5rem;
         }
 
         .project-title {
@@ -511,6 +500,8 @@
             flex-wrap: wrap;
             gap: 0.5rem;
             margin-top: 1rem;
+            margin-bottom: 2rem;
+            flex-shrink: 0;
         }
 
         .project-tag {
@@ -522,8 +513,10 @@
 
         .project-links {
             display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: flex-start;
+            flex-shrink: 0;
         }
 
         .project-link {
@@ -1300,6 +1293,433 @@
             box-shadow: 0 7px 20px rgba(23, 195, 178, 0.4);
             color: var(--light);
         }
+
+        .project-description p {
+            margin-bottom: 0.75rem;
+            /* Spacing between paragraphs */
+            color: var(--text-light);
+            /* Use consistent text color */
+            font-size: 0.9rem;
+            /* Match surrounding text size */
+        }
+
+        .project-description p:last-child {
+            margin-bottom: 0;
+            /* Remove margin from the last paragraph */
+        }
+
+        .project-description ul {
+            list-style: disc;
+            /* Standard bullet points */
+            padding-left: 1.5rem;
+            /* Indent the list */
+            margin-top: 0.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .project-description li {
+            margin-bottom: 0.25rem;
+            /* Spacing between list items */
+        }
+
+        .project-description strong {
+            font-weight: 600;
+            /* Or 700 if you prefer stronger bold */
+            color: var(--text);
+            /* Make bold text slightly darker */
+        }
+
+        /* Style links generated within the description if needed */
+        .project-description a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        .project-description a:hover {
+            color: var(--primary-dark);
+        }
+
+        .project-description h1,
+        .project-description h2,
+        .project-description h3,
+        .project-description h4,
+        .project-description h5,
+        .project-description h6 {
+            /* Ensure they are displayed as blocks */
+            display: block;
+            /* Give them distinct styling */
+            font-family: 'Poppins', sans-serif;
+            /* Match other headers */
+            font-weight: 600;
+            /* Make them bold */
+            color: var(--text);
+            /* Or var(--primary) if you prefer */
+            margin-top: 1rem;
+            /* Add space above */
+            margin-bottom: 0.5rem;
+            /* Add space below */
+            line-height: 1.3;
+            /* Adjust line height */
+            /* Adjust font size as needed */
+        }
+
+        /* Example: Style H3 specifically */
+        .project-description h3 {
+            font-size: 1.1rem;
+            /* Slightly larger than paragraph */
+            color: var(--primary);
+            /* Make it stand out with primary color */
+        }
+
+        /* Example: Style H4 */
+        .project-description h4 {
+            font-size: 1.0rem;
+            font-weight: 500;
+            color: var(--text-light);
+            margin-top: 0.8rem;
+        }
+
+        .project-card {
+            background: var(--light);
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 700px;
+            box-shadow: var(--shadow);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            /* Allow content to fill remaining space */
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            /* Hide overflow within the content area */
+            position: relative;
+            /* For absolute positioning of 'know more' */
+            padding: 1.5rem;
+        }
+
+        .project-description {
+            flex-grow: 1;
+            /* Allow description to take available space */
+            overflow: hidden;
+            /* Hide overflowing description text */
+            position: relative;
+            /* Needed for pseudo-element */
+            margin-bottom: 1rem;
+            /* Add some space before tags/links */
+            max-height: none;
+        }
+
+        /* Optional: Add a subtle fade-out effect for truncated text */
+        .project-description::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            /* Height of the fade */
+            background: linear-gradient(to bottom, transparent, var(--light));
+            /* Fade to card background */
+            pointer-events: none;
+            /* Allow clicks through */
+        }
+
+
+        .project-tags,
+        .project-links {
+            margin-top: auto;
+            /* Push tags and links to the bottom */
+            flex-shrink: 0;
+            /* Prevent shrinking */
+        }
+
+        .know-more-indicator {
+            position: absolute;
+            bottom: 5px;
+            /* Position slightly above the bottom edge */
+            right: 15px;
+            font-size: 0.75rem;
+            color: var(--primary);
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.8);
+            /* Slight background for readability */
+            padding: 2px 6px;
+            border-radius: 3px;
+            pointer-events: none;
+            /* Don't interfere with card click */
+        }
+
+
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1050;
+            display: none;
+            /* Hidden by default */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+            /* Show when active */
+        }
+
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            /* Semi-transparent black */
+            cursor: pointer;
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: var(--light);
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            z-index: 1051;
+            width: 90%;
+            max-width: 800px;
+            /* Adjust max width as needed */
+            max-height: 90vh;
+            /* Limit height */
+            display: flex;
+            /* Use flex for layout */
+            flex-direction: column;
+            /* Stack header/body/footer if needed */
+            overflow: hidden;
+            /* Prevent content spilling */
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--text-lighter);
+            background: none;
+            border: none;
+            cursor: pointer;
+            line-height: 1;
+            padding: 5px;
+            z-index: 1052;
+            /* Ensure it's above content */
+        }
+
+        .modal-close-btn:hover {
+            color: var(--text);
+        }
+
+        .modal-body {
+            padding: 2rem;
+            overflow-y: auto;
+            /* Allow scrolling if content is too long */
+            display: flex;
+            /* Arrange image and text side-by-side */
+            gap: 1.5rem;
+        }
+
+        .modal-img-container {
+            flex: 0 0 250px;
+            /* Fixed width for image container */
+            height: auto;
+            /* Adjust height based on image */
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .modal-img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .modal-text-content {
+            flex: 1;
+            /* Take remaining space */
+        }
+
+        .modal-project-title {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        /* Ensure project description styles apply in modal too */
+        #modalProjectDescription {
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+            max-height: none;
+            /* Remove height limit in modal */
+        }
+
+        #modalProjectDescription::after {
+            display: none;
+            /* Remove fade effect in modal */
+        }
+
+        #modalProjectTags {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Responsive adjustments for modal */
+        @media (max-width: 768px) {
+            .modal-body {
+                flex-direction: column;
+                /* Stack image and text on smaller screens */
+            }
+
+            .modal-img-container {
+                flex: 0 0 auto;
+                /* Reset flex basis */
+                width: 100%;
+                max-height: 250px;
+                /* Limit image height */
+                margin-bottom: 1rem;
+            }
+
+            .modal-img-container img {
+                height: 100%;
+                object-fit: cover;
+                /* Cover the area nicely */
+            }
+
+            .modal-content {
+                max-width: 95%;
+            }
+
+            .modal-body {
+                padding: 1.5rem;
+            }
+
+            .modal-project-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Modal link spacing */
+        #modalProjectLinks {
+            margin-top: 1.5rem;
+            /* Adds space ABOVE the links block */
+            margin-bottom: 2rem;
+            /* Adds space BELOW the links block */
+            display: flex;
+            /* Enables flexbox layout */
+            flex-direction: column;
+            /* Stacks the links vertically */
+            gap: 0.75rem;
+            /* Adds space BETWEEN each link */
+            align-items: flex-start;
+            /* Aligns the links to the left side */
+        }
+
+        /* Prevent body scroll when modal is open */
+        body.modal-open {
+            overflow: hidden;
+        }
+
+        /* Style the image modal itself (similar to project modal) */
+        #imageModal {
+            z-index: 1060;
+            /* Higher z-index than project modal */
+            background-color: rgba(0, 0, 0, 0.8);
+            /* Darker overlay for focus */
+        }
+
+        /* Specific overlay for image modal */
+        #imageModal .modal-overlay {
+            background-color: transparent;
+            /* Let the modal background handle the dimming */
+            cursor: zoom-out;
+            /* Indicate clicking closes */
+        }
+
+        /* Container for the image */
+        .image-modal-content {
+            position: relative;
+            background-color: transparent;
+            /* No background needed, just show image */
+            padding: 10px;
+            /* Small padding around image */
+            max-width: 90%;
+            /* Limit image width */
+            max-height: 90vh;
+            /* Limit image height */
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+            /* Optional shadow */
+            border-radius: 5px;
+            /* Optional rounded corners for the image */
+            overflow: hidden;
+            /* In case padding/border causes issues */
+        }
+
+        /* The image inside the modal */
+        #fullProjectImage {
+            display: block;
+            /* Remove extra space below image */
+            width: auto;
+            /* Let height determine width */
+            height: auto;
+            /* Let width determine height */
+            max-width: 100%;
+            /* Ensure image doesn't exceed container width */
+            max-height: calc(90vh - 20px);
+            /* Adjust max height accounting for padding */
+            object-fit: contain;
+            /* Scale image down nicely if needed */
+        }
+
+        /* Position the close button for the image modal */
+        .image-modal-close-btn {
+            position: absolute;
+            top: -10px;
+            /* Position slightly outside the top */
+            right: -10px;
+            /* Position slightly outside the right */
+            font-size: 2.5rem;
+            color: var(--light);
+            /* White close button */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Slight background for visibility */
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            line-height: 35px;
+            /* Adjust line height to center 'x' */
+            text-align: center;
+            padding: 0;
+            z-index: 1061;
+            /* Above the image content */
+        }
+
+        .image-modal-close-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Add cursor pointer to the small image in the project modal */
+        #modalProjectImage {
+            cursor: zoom-in;
+            /* Indicate it can be enlarged */
+        }
     </style>
 </head>
 
@@ -1382,10 +1802,12 @@
                             <span class="skill-item">Java</span>
                             <span class="skill-item">Dart</span>
                             <span class="skill-item">C++</span>
-                            <span class="skill-item">HTML5</span>
-                            <span class="skill-item">CSS3</span>
-                            <span class="skill-item">JavaScript</span>
+                            <span class="skill-item">Html-CSS-JS</span>
+                            <span class="skill-item">Apache Kafka</span>
+                            <span class="skill-item">Redis</span>
                             <span class="skill-item">Git</span>
+                            <span class="skill-item">DBMS & ORM</span>
+
                         </div>
                     </div>
 
@@ -1423,7 +1845,7 @@
                     </div>
 
                     <div class="skill-category">
-                        <h4>Cloud & DevOps</h4>
+                        <h4>Cloud - Backend - DevOps</h4>
                         <div class="skill-list">
                             <span class="skill-item">Docker</span>
                             <span class="skill-item">AWS</span>
@@ -1439,7 +1861,7 @@
                             <span class="skill-item">Flutter</span>
                             <span class="skill-item">Firebase</span>
                             <span class="skill-item">Riverpod</span>
-                            <span class="skill-item">FastAPI</span>
+                            <span class="skill-item">Supabase</span>
                             <span class="skill-item">Google OAuth</span>
                         </div>
                     </div>
@@ -1455,6 +1877,15 @@
                 <h2>Experience</h2>
             </div>
             <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Apr,2025-Now</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">TurboML - SF,California</h3>
+                        <p class="timeline-role">AI Engineering Intern - remote</p>
+                        <p><strong>Technologies:</strong>NLP, FastAPI, C++, Rust, Kafka, Agentic AI, gRPC</p>
+                    </div>
+                </div>
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">Sep,2024-Now</div>
@@ -1855,8 +2286,45 @@
         </div>
     </footer>
 
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close-btn" id="modalCloseBtn">×</button>
+            <div class="modal-body">
+                <div class="modal-img-container">
+                    <img id="modalProjectImage" src="" alt="Project Image">
+                </div>
+                <div class="modal-text-content">
+                    <span id="modalProjectCategory" class="project-category"></span>
+                    <h3 id="modalProjectTitle" class="modal-project-title"></h3>
+                    <!-- Full description will go here -->
+                    <div id="modalProjectDescription" class="project-description"></div>
+                    <div id="modalProjectTags" class="project-tags">
+                        <!-- Tags will be loaded here -->
+                    </div>
+                    <div id="modalProjectLinks" class="project-links">
+                        <!-- Links will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Viewer Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-overlay" id="imageModalOverlay"></div>
+        <div class="image-modal-content">
+            <button class="modal-close-btn image-modal-close-btn" id="imageModalCloseBtn">×</button>
+            <img id="fullProjectImage" src="" alt="Full Project Image">
+        </div>
+    </div>
+
     <!-- Scripts -->
-    <!-- Load config first -->
+    <!-- Load Marked.js library first -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Load your config file -->
     <script src="config.js"></script>
     <script>
 
@@ -1872,30 +2340,108 @@
 
         // Load projects
         const projectGrid = document.getElementById('projectGrid');
+        const modal = document.getElementById('projectModal');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+        const modalProjectImage = document.getElementById('modalProjectImage');
+        const modalProjectCategory = document.getElementById('modalProjectCategory');
+        const modalProjectTitle = document.getElementById('modalProjectTitle');
+        const modalProjectDescription = document.getElementById('modalProjectDescription');
+        const modalProjectTags = document.getElementById('modalProjectTags');
+        const modalProjectLinks = document.getElementById('modalProjectLinks');
+        const imageModal = document.getElementById('imageModal');
+        const imageModalOverlay = document.getElementById('imageModalOverlay');
+        const imageModalCloseBtn = document.getElementById('imageModalCloseBtn');
+        const fullProjectImage = document.getElementById('fullProjectImage');
 
-        config.projects.forEach(project => {
-            const projectCard = document.createElement('div');
-            projectCard.className = 'project-card';
 
-            let projectLinks = '';
+        // Function to open the modal
+        function openModal(project) {
+            modalProjectImage.src = project.image;
+            modalProjectImage.alt = project.title;
+            modalProjectCategory.textContent = project.category;
+            modalProjectTitle.textContent = project.title;
+
+            // Parse the FULL description for the modal
+            modalProjectDescription.innerHTML = marked.parse(project.description);
+
+            // Populate tags
+            modalProjectTags.innerHTML = project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('');
+
+            // Populate links
+            let linksHtml = '';
             if (project.live) {
-                projectLinks += `<a href="${project.live}" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i>Live Webapp + Architecture + Training Code + Evaluation Metrics</a>`;
+                linksHtml += `<a href="${project.live}" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i>Live Webapp + Architecture + Training Code + Evaluation Metrics</a>`;
             }
             if (project.github) {
-                projectLinks += `<a href="${project.github}" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>`;
+                linksHtml += `<a href="${project.github}" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>`;
             }
             if (project.video) {
-                projectLinks += `<a href="${project.video}" target="_blank" class="project-link"><i class="fab fa-youtube"></i> Video</a>`;
+                linksHtml += `<a href="${project.video}" target="_blank" class="project-link"><i class="fab fa-youtube"></i> Video</a>`;
             }
             if (project.paper) {
-                projectLinks += `<a href="${project.paper}" target="_blank" class="project-link"><i class="fas fa-file-alt"></i> Paper</a>`;
+                linksHtml += `<a href="${project.paper}" target="_blank" class="project-link"><i class="fas fa-file-alt"></i> Paper</a>`;
             }
             if (project.ollama) {
-                projectLinks += `<a href="${project.ollama}" target="_blank" class="project-link"><i class="fas fa-code"></i> Ollama</a>`;
+                linksHtml += `<a href="${project.ollama}" target="_blank" class="project-link"><i class="fas fa-code"></i> Ollama</a>`;
             }
+            modalProjectLinks.innerHTML = linksHtml;
+
+            modal.classList.add('active');
+            document.body.classList.add('modal-open'); // Prevent background scroll
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.classList.remove('modal-open'); // Re-enable background scroll
+        }
+
+        // Function to open the image modal
+        function openImageModal(imageUrl) {
+            fullProjectImage.src = imageUrl; // Set the source for the large image
+            imageModal.classList.add('active');
+            // Keep body.modal-open as the main project modal is likely still open underneath
+        }
+
+        // Function to close the image modal
+        function closeImageModal() {
+            imageModal.classList.remove('active');
+            fullProjectImage.src = ""; // Clear src to prevent brief display of old image
+        }
+
+        // Load projects into the grid
+        config.projects.forEach((project, index) => {
+            const projectCard = document.createElement('div');
+            projectCard.className = 'project-card';
+            projectCard.dataset.projectIndex = index; // Keep this
+
+            // --- START: Generate links HTML string ---
+            let projectLinksHtml = ''; // Create a string for the links
+            if (project.live) {
+                projectLinksHtml += `<a href="${project.live}" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i>Live Webapp + Architecture + Training Code + Evaluation Metrics</a>`;
+            }
+            if (project.github) {
+                projectLinksHtml += `<a href="${project.github}" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>`;
+            }
+            if (project.video) {
+                projectLinksHtml += `<a href="${project.video}" target="_blank" class="project-link"><i class="fab fa-youtube"></i> Video</a>`;
+            }
+            if (project.paper) {
+                projectLinksHtml += `<a href="${project.paper}" target="_blank" class="project-link"><i class="fas fa-file-alt"></i> Paper</a>`;
+            }
+            if (project.ollama) {
+                projectLinksHtml += `<a href="${project.ollama}" target="_blank" class="project-link"><i class="fas fa-code"></i> Ollama</a>`;
+            }
+            // --- END: Generate links HTML string ---
+
+
+            // Parse the description using Marked.js
+            const descriptionHtml = marked.parse(project.description);
 
             const tags = project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('');
 
+            // --- Modify the innerHTML construction ---
             projectCard.innerHTML = `
                 <div class="project-img">
                     <img src="${project.image}" alt="${project.title}">
@@ -1903,17 +2449,61 @@
                 <div class="project-content">
                     <span class="project-category">${project.category}</span>
                     <h3 class="project-title">${project.title}</h3>
-                    <p>${project.description}</p>
+
+                    <div class="project-description">${descriptionHtml}</div>
+
+                    <!-- Keep the 'Tap to know more' indicator -->
+                    <span class="know-more-indicator">Tap to know more</span>
+
                     <div class="project-tags">
                         ${tags}
                     </div>
+
+                    <!-- ADD THIS DIV BACK -->
                     <div class="project-links">
-                        ${projectLinks}
+                        ${projectLinksHtml}
                     </div>
+                    <!-- END OF ADDED DIV -->
+
                 </div>
-            `;
+            `; // End of projectCard.innerHTML
 
             projectGrid.appendChild(projectCard);
+        });
+
+        // Event Listener for opening the modal (using event delegation)
+        projectGrid.addEventListener('click', (event) => {
+            const card = event.target.closest('.project-card'); // Find the closest project card ancestor
+            if (card) {
+                const projectIndex = card.dataset.projectIndex;
+                if (projectIndex !== undefined) {
+                    openModal(config.projects[projectIndex]);
+                }
+            }
+        });
+
+        // Event Listener: Click the small image in the project modal to open the large view
+        modalProjectImage.addEventListener('click', () => {
+            // Check if the image source is valid before opening
+            if (modalProjectImage.src && modalProjectImage.src !== window.location.href) { // Check it's not empty or just the base URL
+                openImageModal(modalProjectImage.src);
+            } else {
+                console.warn("Cannot open image modal: Invalid source on modalProjectImage.");
+            }
+        });
+
+        // Event Listeners for closing the modal
+        modalCloseBtn.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', closeModal);
+        // Event Listeners: Close the image modal
+        imageModalCloseBtn.addEventListener('click', closeImageModal);
+        imageModalOverlay.addEventListener('click', closeImageModal);
+
+        // Optional: Close image modal with Escape key
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && imageModal.classList.contains('active')) {
+                closeImageModal();
+            }
         });
 
         // Navigation
